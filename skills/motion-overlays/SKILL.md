@@ -36,7 +36,7 @@ Motion that creators liked: **one smooth ease-in-out move per element**, glide i
 ## Check over the real frame before placing (non-negotiable)
 Grab the frame under each beat from the camera file, render the overlay still, composite them, and **look**. Also draw the **caption band** on it. We caught all of these only this way:
 - **Face:** panels designed for 16:9 (right third free) covered the face in a **4:3 selfie frame**. Fix in the kit: when the frame is narrower than 16:9, scale side panels as a whole to the outer ~34% of the width, 80 px from the edge, and scale full-frame type to its 16:9 proportions so it stays below the chin.
-- **Overflow:** an 11-item list didn't fit until scaled; more than ~11 items needs another layout.
+- **Overflow:** an 11-item list didn't fit until scaled; more than ~11 items need another layout.
 - **Captions:** bottom-anchored elements (opener, big word, lower third, journey) sat in the subtitle band. Fix in the kit: a token like `caption_band_top_at_1080` and every bottom offset = max(own, band top).
 - **Widows:** a highlighted word followed by "." wrapped the dot onto its own line. Fix in the kit: glue punctuation to the highlight's last word (`nowrap`) and use `text-wrap: pretty` on display text.
 
