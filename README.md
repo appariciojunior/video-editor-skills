@@ -14,7 +14,7 @@ These are **skills only**: the method, the numbers, the rules and the traps, lea
 | `vlog-pacing` | silence detection, pads, pause rules, room at scene edges, jump-cut zoom |
 | `broll` | finding and watching B-roll, cutting it by action and story |
 | `resolve-scripting` | what works in the Resolve API, what silently fails, what crashes it |
-| `voice-and-audio` | loudness normalize, diagnosing a muffled voice, EQ recipe |
+| `voice-and-audio` | loudness normalization, diagnosing a muffled voice, EQ recipe |
 | `music-and-sound` | Epidemic Sound cues per section, ducking envelope, tasteful SFX |
 | `captions` | clean, correct, one-line captions read before import |
 | `motion-overlays` | a Remotion brand kit timed to your words, face- and caption-safe |
