@@ -1,6 +1,7 @@
 {
   "name": "video-editor-skills",
   "owner": { "name": "appariciojunior" },
+  "description": "Video editing skills for Claude Code and DaVinci Resolve Studio.",
   "plugins": [
     {
       "name": "video-editor-skills",
