@@ -25,10 +25,12 @@ Plus `templates/config.example.json` (starting values) and `LEARNINGS.md`, the s
 
 ## Install
 
-**As a plugin** (keeps the skills together):
+**As a plugin** (keeps the skills together). The repo is its own plugin marketplace, so add it first, then install:
 ```
-/plugin install <path-or-git-url-to-this-folder>
+/plugin marketplace add appariciojunior/video-editor-skills
+/plugin install video-editor-skills@video-editor-skills
 ```
+From a local clone, use the folder path instead: `/plugin marketplace add /path/to/video-editor-skills`.
 **Or copy the skills** into your project (`.claude/skills/`) or your user folder (`~/.claude/skills/`):
 ```
 cp -R skills/* ~/.claude/skills/
