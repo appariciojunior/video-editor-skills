@@ -28,5 +28,12 @@ Measure before touching anything:
   - +2 dB high shelf at 10 kHz (air)
 - Ask before driving the UI with computer-use; the creator may prefer to do it.
 
+## Without Voice Isolation or scriptable EQ (free edition)
+Treat the voice outside Resolve and place it on a new track. The camera file is only read, and the original audio track is muted, not removed:
+- ffmpeg chain: one channel if L/R are identical → `highpass=f=80` → `-3 dB @ 250 Hz` (boom) → `+2 dB @ 3.5 kHz` → `treble=g=2:f=9000` → gentle `acompressor` (−26 dB, 2.5:1) → back to stereo → two-pass `loudnorm` (−16 LUFS, −2 dBTP, `linear=true`) → 24-bit WAV.
+- Skip denoising when the noise floor between words is already near −80 dBFS (OBS noise suppression). It only makes the voice sound processed.
+- **Measure loudness on the final stereo file.** Dual mono reads ~3 dB louder than the same signal measured as mono: normalizing the mono to −16 delivers about −13.
+- Check that the output length equals the source's, or it drifts out of sync.
+
 ## Prevention (tell the creator once)
 Clip the lav on the outside of clothing, 15–20 cm below the chin; in stereo-mode receivers with one transmitter the voice is on one channel only.

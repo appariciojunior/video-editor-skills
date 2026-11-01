@@ -29,7 +29,7 @@ Follow `resolve-scripting`. Order inside the build:
 2. copy the template timeline into the timelines bin as "<video> - Transcript cut" (v2, v3… never overwrite) and empty the copy (it keeps the track FX chain);
 3. set a custom frame if asked (e.g. 4:3 2880x2160, footage *scaled to fill with crop*);
 4. lay the cut on V1/A1, alternate jump-cut zoom, colour B-roll pieces green;
-5. grade (log footage only);
+5. grade: a log look on log footage only; a measured CDL correction on other footage if the creator asks (see `resolve-scripting`);
 6. markers for spoken notes (pink);
 7. **audio treatment last**: Normalize Audio Level on A1 (see `voice-and-audio`).
 

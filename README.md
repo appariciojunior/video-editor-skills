@@ -43,7 +43,7 @@ cp -R skills/* ~/.claude/skills/
 5. Give feedback in plain words ("too choppy", "music louder on B-roll", "add captions", "graphics"). Claude adds every lesson to your `CLAUDE.md` so the next video starts smarter.
 
 ## You need
-DaVinci Resolve **Studio** (external scripting), ffmpeg, Python 3.9+, a speech-to-text API with word timestamps. Optional: Epidemic Sound MCP, Figma MCP, Node + Remotion.
+DaVinci Resolve **Studio** recommended (external scripting). The free version works from the Workspace > Scripts menu, with limits (see `resolve-scripting`). Also ffmpeg, Python 3.9+, a speech-to-text API with word timestamps. Optional: Epidemic Sound MCP, Figma MCP, Node + Remotion.
 
 ## Safety built in
 Raw footage is never modified. In Resolve, Claude only **adds** (new timelines, new clips) and never touches your template or projects. Keys are never printed. Nothing is published without you.

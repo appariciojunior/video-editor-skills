@@ -21,6 +21,7 @@ Short notes on what went wrong on real videos and the rule that came out of it. 
 - **Normalizing can hurt.** A silent clip was boosted +30 dB into hiss.
 
 ## Voice
+- **Dual mono reads 3 dB hot.** Loudness measured on one channel and normalized to −16 played back near −13. Measure the stereo you deliver.
 - **"Underwater" voice = measure it.** Channels were identical (not a phase issue); the spectrum had almost nothing above 3 kHz: a covered mic. EQ fixes it; Voice Isolation helps; EQ isn't scriptable.
 
 ## Captions
@@ -41,6 +42,13 @@ Short notes on what went wrong on real videos and the rule that came out of it. 
 - `AppendToTimeline` end is exclusive; audio-only clips count frames at their own rate; timecode counts 24 frames per second at 23.976.
 - Subtitles via the API land after the timeline end; a workaround crashed Resolve.
 - External scripts render only with `StartRendering([job], False)`, into a path without spaces. Restore the Deliver settings afterwards.
+- **The free edition can be scripted, from the inside.** No external scripting, but `.lua` in Workspace > Scripts reaches the Resolve API (every call we tried worked). Its sandbox lost `loadfile` and `SavePrefs` in 21.1.2, so data goes in embedded in the script and comes out through the log.
+- **A green mock isn't a green Resolve.** `fuscript` has no sandbox; the same script failed in the menu.
+
+## Picture
+- **Phone/webcam footage gets a measured CDL.** Simulate it on real frames, apply with `SetCDL`, check an exported still against the simulation.
+- **Part of the frame = a cropped copy on the track above.** Windows aren't scriptable; crop + CDL is.
+- **Grade with the fade.** A graded copy that cut at an OBS crossfade would pop; one-frame pieces with opacity following the measured fade don't.
 
 ## Export
 - "Automatic" quality made 25 GB for 11 minutes. 50 Mb/s H.264 (or 30 Mb/s H.265) is plenty for YouTube.

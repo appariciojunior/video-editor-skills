@@ -9,7 +9,7 @@ You are going to be a **first-pass editor**. The creator films, you import, cut,
 
 ## What the user needs
 
-- **DaVinci Resolve Studio** (the free version has no external scripting). In Preferences > System > General set *External scripting using: Local*, restart Resolve.
+- **DaVinci Resolve Studio** (the free version has no external scripting). In Preferences > System > General set *External scripting using: Local*, restart Resolve. On the free version the build runs from the Workspace > Scripts menu, with limits: see `resolve-scripting` → *Free edition*.
 - **ffmpeg / ffprobe**, Python 3.9+, Node 18+ (only for motion graphics).
 - A **speech-to-text API** with word timestamps and verbatim mode (we used ElevenLabs Scribe: word-level timings, audio events like "(laughs)", auto language detection). Any service with per-word start/end works.
 - Optional: an **Epidemic Sound** account connected as an MCP server (music + SFX), **Figma** MCP (brand boards), **Remotion** (rendered overlays).
